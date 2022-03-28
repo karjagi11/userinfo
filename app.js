@@ -23,7 +23,7 @@ app.get("/signup",function (req,res){
     return res.render('signup.html'); 
 })
 app.get("/index",function (req,res){
-    return res.render('index.html'); 
+    return res.render('home.html'); 
 })
 app.post('/signup', function(req,res){
    var name = req.body.name;
@@ -44,9 +44,9 @@ app.post('/signup', function(req,res){
 })
 
 app.get('/login',function(req,res){
-   //  res.set({
-   //     'Access-control-Allow-Origin': '*'
-   //  });
+    res.set({
+       'Access-control-Allow-Origin': '*'
+    });
     return res.redirect('login.html');
  }).listen(3000)
 
